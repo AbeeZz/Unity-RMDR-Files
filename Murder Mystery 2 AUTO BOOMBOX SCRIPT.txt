@@ -1,0 +1,7 @@
+_G.ID = 6249010052
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+ReplicatedStorage.RoundStart.OnClientEvent:Connect(function()
+   ReplicatedStorage.PlaySong:FireServer(string.format("rbxassetid://%s", tostring(_G.ID)))
+end)
